@@ -1,0 +1,248 @@
+:root{
+    /*Colors*/
+    --primary: #270909;
+    --primarydark: #080809;
+    --secundary: #FFCE00;
+    --secundarydark: rgb(233, 287, 2);
+    --white: white;
+    --black: black;
+    --fontmain: 'Staatliches', cursive;
+
+    /*Fuentes*/
+    --fontmain: 'Staatliches', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    box-sizing: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*Globals*/
+body{
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--fontmain);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+.footer{
+    background-color: var(--primarydark);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text{
+    font-family: var(--fontmain);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.navegation{
+    background-color: var(--primarydark);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Separación Forma nueva */
+}
+
+.navegation__link{
+    font-family: var(--fontmain);
+    color: var(--white);
+    font-size: 3rem;
+/*    margin-right: 2rem;*/
+}
+/*.navegation__link:last-of-type{
+    margin-right: 0;
+}*/
+.navegation__link--active,
+.navegation__link:hover{
+    color: var(--secundary);
+}
+
+/* Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+.product{
+    background-color: var(--primarydark);
+    padding: 1rem;
+}
+
+.product__name{
+    font-size: 2.5rem;
+}
+
+.product__price{
+    font-size: 2.8rem;
+    color: var(--secundary);
+}
+
+.product__name,
+.product__price{
+    font-family: var(--fontmain);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*graphics*/
+.graphics{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.graphics--Tshirts{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.graphics--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 8 / 9;
+}
+@media (min-width: 768px) {
+    .graphics--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/** About Us**/
+.aboutus{
+    display: grid;
+    grid-template-rows: 2, auto;
+}
+
+@media (min-width: 768px) {
+    .aboutus{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.aboutus__image{
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 768px) {
+     .about__image{
+         grid-column: 2 / 3;
+     }
+}
+
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+     .blocks{
+         grid-template-columns: repeat(4, 1fr);
+     }
+}
+
+.block{
+    text-align: center;
+}
+
+.bloke_title{
+    margin: 0;
+}
+
+
+/** Product Image **/
+@media (min-width: 768px) {
+    .Tshirt{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    }
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.form__camp{
+    border: 0.5rem solid var(--black);
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2rem;
+    font-family: var(--fontmain);
+    padding: 1rem;
+    appearance: none;
+}
+
+.form__submit{
+    background-color: var(--secundary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fontmain);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column:1 / 3;
+}
+
+.form__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarydark);
+}
+
